@@ -1,0 +1,25 @@
+$color-white: #FFFFFF;
+$color-purple: #D0D6F9;
+$color-black: #0B0D17;
+
+:root {
+  --explore-button-size: 274px;
+  --explore-button-font-size: 32px;
+  --explore-button-color: #{ $color-black };
+  --explore-button-background-color: #{ $color-white };
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Bellefair', serif;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+}
