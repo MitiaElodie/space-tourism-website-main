@@ -27,7 +27,14 @@ export default {
 
    border-radius: 100%;
    border: none;
+   cursor: pointer;
 
    text-transform: uppercase;
+
+   transition: box-shadow 0.1s ease;
+
+   &:hover {
+      box-shadow: 0 0 0 var(--explore-button-shadow-width) var(--explore-button-shadow-color);
+   }
 }
 </style>

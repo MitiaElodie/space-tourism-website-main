@@ -7,6 +7,8 @@ $color-black: #0B0D17;
   --explore-button-font-size: 32px;
   --explore-button-color: #{ $color-black };
   --explore-button-background-color: #{ $color-white };
+  --explore-button-shadow-color: #24262f;
+  --explore-button-shadow-width: 40px;
 }
 
 *,
@@ -16,6 +18,7 @@ $color-black: #0B0D17;
   margin: 0;
   padding: 0;
   font-family: 'Bellefair', serif;
+  background-color: $color-black;
 }
 
 body {
