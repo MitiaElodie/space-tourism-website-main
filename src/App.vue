@@ -2,7 +2,14 @@
 </script>
 
 <template>
-  <div class="app">
-    a
-  </div>
+   <div class="app">
+      <header>
+      </header>
+      <main>
+         <RouterView />
+      </main>
+   </div>
 </template>
+
+<style lang="scss">
+</style>
