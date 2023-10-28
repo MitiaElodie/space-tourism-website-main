@@ -3,22 +3,51 @@ $color-purple: #D0D6F9;
 $color-black: #0B0D17;
 
 :root {
-  --explore-button-size: 274px;
-  --explore-button-font-size: 32px;
+  --color-text: #{ $color-white };
+  --color-background: #{ $color-black };
+
+  --h1-size: 150px;
+  --h2-size: 100px;
+  --h3-size: 56px;
+  --h4-size: 32px;
+  --h5-size: 28px;
+
+  --explore-button-size: 150px;
+  --explore-button-font-size: 20px;
   --explore-button-color: #{ $color-black };
   --explore-button-background-color: #{ $color-white };
   --explore-button-shadow-color: #24262f;
   --explore-button-shadow-width: 40px;
 }
 
+@media (min-width: 480px) {
+  :root {
+    --explore-button-size: 242px;
+    --explore-button-font-size: 32px;
+    --explore-button-color: #{ $color-black };
+    --explore-button-background-color: #{ $color-white };
+    --explore-button-shadow-color: #24262f;
+    --explore-button-shadow-width: 40px;
+  }
+}
+
+@media (min-width: 760px) {
+  :root {
+    --explore-button-size: 274px;
+    --explore-button-font-size: 32px;
+    --explore-button-color: #{ $color-black };
+    --explore-button-background-color: #{ $color-white };
+    --explore-button-shadow-color: #24262f;
+    --explore-button-shadow-width: 40px;
+  }
+}
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Bellefair', serif;
-  background-color: $color-black;
+  font-family: inherit;
 }
 
 body {
