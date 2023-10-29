@@ -24,6 +24,8 @@ export default {
 </template>
 
 <style lang="scss">
+@use '@/assets/base.scss';
+
 .home-view {
    &__explore-button-container,
    &__description {
@@ -32,6 +34,41 @@ export default {
 
    &__intro {
       text-transform: uppercase;
+      font-size: var(--h5-size);
+   }
+
+   &__title {
+      text-transform: uppercase;
+      padding-top: 0; // to remove the big gap
+      font-size: var(--h1-size);
+   }
+
+   &__details {
+      line-height: var(--body-line-height);
+      font-size: var(--body-size);
+   }
+
+   --description-margin-bottom: 40px;
+   &__description {
+      margin-bottom: var(--description-margin-bottom);
+   }
+}
+
+@media (min-width: base.$tablet-breakpoint) {
+   .home-view {
+      --description-margin-bottom: 60px;
+   }
+}
+
+@media (min-width: base.$laptop-breakpoint) {
+   .home-view {
+      display: flex;
+      gap: 20px;
+
+      &__explore-button-container,
+      &__description {
+         text-align: start;
+      }
    }
 }
 </style>

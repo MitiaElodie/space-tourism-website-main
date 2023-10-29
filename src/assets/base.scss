@@ -2,15 +2,22 @@ $color-white: #FFFFFF;
 $color-purple: #D0D6F9;
 $color-black: #0B0D17;
 
+
+$tablet-breakpoint: 480px;
+$laptop-breakpoint: 760px;
+
 :root {
   --color-text: #{ $color-white };
   --color-background: #{ $color-black };
 
-  --h1-size: 150px;
+
+  --h1-size: 80px;
   --h2-size: 100px;
   --h3-size: 56px;
   --h4-size: 32px;
-  --h5-size: 28px;
+  --h5-size: 16px;
+  --body-size: 15px;
+  --body-line-height: 28px;
 
   --explore-button-size: 150px;
   --explore-button-font-size: 20px;
@@ -20,8 +27,15 @@ $color-black: #0B0D17;
   --explore-button-shadow-width: 40px;
 }
 
-@media (min-width: 480px) {
+@media (min-width: $tablet-breakpoint) {
   :root {
+    --h1-size: 150px;
+    --h2-size: 100px;
+    --h3-size: 56px;
+    --h4-size: 32px;
+    --h5-size: 20px;
+    --body-size: 16px;
+
     --explore-button-size: 242px;
     --explore-button-font-size: 32px;
     --explore-button-color: #{ $color-black };
@@ -31,8 +45,15 @@ $color-black: #0B0D17;
   }
 }
 
-@media (min-width: 760px) {
+@media (min-width: $laptop-breakpoint) {
   :root {
+    --h1-size: 150px;
+    --h2-size: 100px;
+    --h3-size: 56px;
+    --h4-size: 32px;
+    --h5-size: 28px;
+    --body-size: 18px;
+
     --explore-button-size: 274px;
     --explore-button-font-size: 32px;
     --explore-button-color: #{ $color-black };
@@ -54,4 +75,5 @@ body {
   min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
+  font-size: var(--body-size)
 }
