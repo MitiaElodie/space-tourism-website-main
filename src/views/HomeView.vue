@@ -8,15 +8,17 @@ export default {
 
 <template>
    <div class="home-view">
-      <section class="home-view__description">
-         <span class="home-view__intro">
-            So, you want to travel to
-         </span>
-         <h1 class="home-view__title">Space</h1>
-         <p class="home-view__details">
-            Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!
-         </p>
-      </section>
+      <div class="home-view__description-container">
+         <section class="home-view__description">
+            <span class="home-view__intro">
+               So, you want to travel to
+            </span>
+            <h1 class="home-view__title">Space</h1>
+            <p class="home-view__details">
+               Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!
+            </p>
+         </section>
+      </div>
       <section class="home-view__explore-button-container">
          <ExploreButton />
       </section>
@@ -35,6 +37,7 @@ export default {
    &__intro {
       text-transform: uppercase;
       font-size: var(--h5-size);
+      color: base.$color-purple;
    }
 
    &__title {
@@ -46,16 +49,25 @@ export default {
    &__details {
       line-height: var(--body-line-height);
       font-size: var(--body-size);
+      color: base.$color-purple;
    }
-
+   
+   --description-max-width: 330px;
    --description-margin-bottom: 40px;
    &__description {
       margin-bottom: var(--description-margin-bottom);
+      max-width: var(--description-max-width);
+   }
+
+   &__description-container {
+      display: flex;
+      justify-content: center;
    }
 }
 
 @media (min-width: base.$tablet-breakpoint) {
    .home-view {
+      --description-max-width: 450px;
       --description-margin-bottom: 60px;
    }
 }
@@ -63,7 +75,7 @@ export default {
 @media (min-width: base.$laptop-breakpoint) {
    .home-view {
       display: flex;
-      gap: 20px;
+      justify-content: space-between;
 
       &__explore-button-container,
       &__description {
