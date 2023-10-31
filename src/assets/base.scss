@@ -23,7 +23,7 @@ $laptop-breakpoint: 760px;
   --explore-button-font-size: 20px;
   --explore-button-color: #{ $color-black };
   --explore-button-background-color: #{ $color-white };
-  --explore-button-shadow-color: #24262f;
+  --explore-button-shadow-color: rgba(255, 255, 255, 0.1);
   --explore-button-shadow-width: 40px;
 }
 
@@ -40,7 +40,6 @@ $laptop-breakpoint: 760px;
     --explore-button-font-size: 32px;
     --explore-button-color: #{ $color-black };
     --explore-button-background-color: #{ $color-white };
-    --explore-button-shadow-color: #24262f;
     --explore-button-shadow-width: 40px;
   }
 }
@@ -58,7 +57,6 @@ $laptop-breakpoint: 760px;
     --explore-button-font-size: 32px;
     --explore-button-color: #{ $color-black };
     --explore-button-background-color: #{ $color-white };
-    --explore-button-shadow-color: #24262f;
     --explore-button-shadow-width: 40px;
   }
 }
@@ -75,5 +73,6 @@ body {
   min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
-  font-size: var(--body-size)
+  font-size: var(--body-size);
+  font-family: 'Bellefair', serif;
 }
