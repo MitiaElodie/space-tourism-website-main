@@ -1,5 +1,15 @@
+<script>
+import PageBase from '@/components/PageBase.vue';
+
+export default {
+  components: {PageBase},
+}
+</script>
 <template>
-  <div class="technology-view">
-    <h1>Technology</h1>
-  </div>
+  <PageBase
+    order="03"
+    title="Space launch 101"
+  >
+    a
+  </PageBase>
 </template>

@@ -1,5 +1,15 @@
+<script>
+import PageBase from '@/components/PageBase.vue';
+
+export default {
+  components: {PageBase},
+}
+</script>
 <template>
-  <div class="crew-view">
-    <h1>Crew</h1>
-  </div>
+  <PageBase
+    order="02"
+    title="Meet our crew"
+  >
+    a
+  </PageBase>
 </template>
