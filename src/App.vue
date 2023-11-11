@@ -1,8 +1,9 @@
-<script>
-</script>
-
 <template>
    <header>
+      <RouterLink :to="{ name: 'home' }">Home</RouterLink>
+      <RouterLink :to="{ name: 'destination' }">Destination</RouterLink>
+      <RouterLink :to="{ name: 'crew' }">Crew</RouterLink>
+      <RouterLink :to="{ name: 'technology' }">Technology</RouterLink>
    </header>
    <main class="app__main">
       <RouterView />
