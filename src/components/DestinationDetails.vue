@@ -13,7 +13,6 @@ export default {
    <div class="destination-details">
       <h2 class="destination-details__name">{{ destination.name }}</h2>
       <p class="destination-details__description">{{ destination.description }}</p>
-      <hr />
       <div class="destination-details__additional-information">
          <div class="destination-details__distance-container">
             <span class="destination-details__label">Avg. distance</span>
@@ -28,19 +27,23 @@ export default {
 </template>
 
 <style lang="scss">
+@use '@/assets/base.scss';
 .destination-details {
+   text-align: center;
    &__name {
       font-size: var(--h2-size);
    }
 
    &__description {
-      margin-bottom: 2em;
+      padding-bottom: 2em;
       color: var(--color-secondary-text);
+      border-bottom: 0.2px solid var(--destination-separator-color);
    }
 
    &__additional-information {
       display: flex;
       gap: 20px;
+      flex-direction: column;
       margin-top: 1em;
       text-transform: uppercase;
    }
@@ -49,6 +52,25 @@ export default {
       display: block;
       margin-bottom: 0.5em;
       color: var(--color-secondary-text);
+   }
+
+   &__separator {
+      color: var(--destination-separator-color)
+   }
+}
+
+
+@media (min-width: base.$tablet-breakpoint) {
+   .destination-details {
+      &__additional-information {
+         flex-direction: row;
+      }
+   }
+}
+
+@media (min-width: base.$laptop-breakpoint) {
+   .destination-details {
+      text-align: left;
    }
 }
 </style>
