@@ -61,7 +61,7 @@ export default {
 
    &__button {
       background: none;
-      color: var(--color-text);
+      color: var(--color-secondary-text);
       border: none;
       text-transform: uppercase;
       padding: 10px;
@@ -72,6 +72,7 @@ export default {
 
       &--selected,
       &--selected:hover {
+         color: var(--color-text);
          border-bottom: 2px solid var(--tab-border-bottom-active-color);
       }
    }
