@@ -22,3 +22,11 @@ export default {
       <slot />
    </div>
 </template>
+
+<style lang="scss">
+.page-base {
+   &__title-container {
+      margin-bottom: 1em;
+   }
+}
+</style>

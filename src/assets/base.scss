@@ -31,6 +31,7 @@ $laptop-breakpoint: 760px;
   --tab-border-bottom-active-color: #{ $color-white};
 
   --destination-separator-color: #979797;
+  --destination-image-size: 170px;
 }
 
 @media (min-width: $tablet-breakpoint) {
@@ -47,6 +48,9 @@ $laptop-breakpoint: 760px;
     --explore-button-color: #{ $color-black };
     --explore-button-background-color: #{ $color-white };
     --explore-button-shadow-width: 40px;
+
+    
+    --destination-image-size: 300px;
   }
 }
 
@@ -64,6 +68,8 @@ $laptop-breakpoint: 760px;
     --explore-button-color: #{ $color-black };
     --explore-button-background-color: #{ $color-white };
     --explore-button-shadow-width: 40px;
+
+    --destination-image-size: 445px;
   }
 }
 *,
