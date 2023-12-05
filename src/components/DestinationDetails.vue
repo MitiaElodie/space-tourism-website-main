@@ -35,10 +35,20 @@ export default {
 
    &__description {
       margin-bottom: 2em;
+      color: var(--color-secondary-text);
    }
 
    &__additional-information {
+      display: flex;
+      gap: 20px;
       margin-top: 1em;
+      text-transform: uppercase;
+   }
+
+   &__label {
+      display: block;
+      margin-bottom: 0.5em;
+      color: var(--color-secondary-text);
    }
 }
 </style>
