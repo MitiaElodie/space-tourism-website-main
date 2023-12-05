@@ -29,6 +29,8 @@ $laptop-breakpoint: 760px;
 
   --tab-border-bottom-hover-color: #979797;
   --tab-border-bottom-active-color: #{ $color-white};
+
+  --destination-separator-color: #979797;
 }
 
 @media (min-width: $tablet-breakpoint) {
