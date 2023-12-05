@@ -1,6 +1,7 @@
 $color-white: #FFFFFF;
 $color-purple: #D0D6F9;
 $color-black: #0B0D17;
+$color-grey: #979797;
 
 
 $tablet-breakpoint: 480px;
@@ -27,11 +28,16 @@ $laptop-breakpoint: 760px;
   --explore-button-shadow-color: rgba(255, 255, 255, 0.1);
   --explore-button-shadow-width: 40px;
 
-  --tab-border-bottom-hover-color: #979797;
+  --tab-border-bottom-hover-color: #{ $color-grey };
   --tab-border-bottom-active-color: #{ $color-white};
 
-  --destination-separator-color: #979797;
+  --destination-separator-color: #{ $color-grey };
   --destination-image-size: 170px;
+
+  --point-slider-size: 10px;
+  --point-slider-color: #{ $color-purple};
+  --point-slider-hover-color: #{ $color-grey };
+  --point-slider-active-color: #{ $color-white };
 }
 
 @media (min-width: $tablet-breakpoint) {
@@ -49,7 +55,6 @@ $laptop-breakpoint: 760px;
     --explore-button-background-color: #{ $color-white };
     --explore-button-shadow-width: 40px;
 
-    
     --destination-image-size: 300px;
   }
 }
@@ -70,6 +75,8 @@ $laptop-breakpoint: 760px;
     --explore-button-shadow-width: 40px;
 
     --destination-image-size: 445px;
+
+    --point-slider-size: 15px;
   }
 }
 *,
