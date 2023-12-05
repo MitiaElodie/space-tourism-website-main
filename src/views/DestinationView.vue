@@ -64,7 +64,7 @@ export default {
       class="destination-view__container"
     >
       <div class="destination-view__image-container">
-        <img :src="selected.image"/>
+        <img :src="selected.image" :alt="`Image of ${ selected.name }`"/>
       </div>
       <div class="destination-view__information-container">
         <TextTabs
