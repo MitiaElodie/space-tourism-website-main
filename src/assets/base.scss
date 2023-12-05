@@ -25,6 +25,9 @@ $laptop-breakpoint: 760px;
   --explore-button-background-color: #{ $color-white };
   --explore-button-shadow-color: rgba(255, 255, 255, 0.1);
   --explore-button-shadow-width: 40px;
+
+  --tab-border-bottom-hover-color: #979797;
+  --tab-border-bottom-active-color: #{ $color-white};
 }
 
 @media (min-width: $tablet-breakpoint) {
