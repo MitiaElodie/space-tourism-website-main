@@ -93,10 +93,22 @@ export default {
   &__terminology-label,
   &__name {
     text-transform: uppercase;
+    margin-bottom: 0.5em;
+  }
+
+  &__terminology-label,
+  &__description {
+    color: var(--color-secondary-text);
   }
 
   &__slider {
     justify-content: center;
+  }
+
+  &__information-container {
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
   }
 }
 
@@ -116,9 +128,8 @@ export default {
     }
 
     &__information-container {
-      display: flex;
+      flex-direction: row;
       align-items: center;
-      gap: 2em;
     }
   }
 }
