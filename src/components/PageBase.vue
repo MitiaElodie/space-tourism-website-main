@@ -31,6 +31,7 @@ export default {
 
    &__order {
       font-weight: 700;
+      margin-right: 0.5em;
       color: var(--page-title-number-color);
    }
 
