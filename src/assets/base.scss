@@ -35,9 +35,13 @@ $laptop-breakpoint: 760px;
   --destination-image-size: 170px;
 
   --point-slider-size: 10px;
-  --point-slider-color: #{ $color-purple};
-  --point-slider-hover-color: #{ $color-grey };
+  --point-slider-color: #36373f;
+  --point-slider-hover-color: #85868b;
   --point-slider-active-color: #{ $color-white };
+
+  --crew-image-size: 223px;
+  --crew-separator-color: #383B4B;
+  --crew-role-color: #8e8f93;
 }
 
 @media (min-width: $tablet-breakpoint) {
@@ -56,6 +60,8 @@ $laptop-breakpoint: 760px;
     --explore-button-shadow-width: 40px;
 
     --destination-image-size: 300px;
+    
+    --crew-image-size: 532px;
   }
 }
 
@@ -77,6 +83,8 @@ $laptop-breakpoint: 760px;
     --destination-image-size: 445px;
 
     --point-slider-size: 15px;
+
+    --crew-image-size: 607px;
   }
 }
 *,
