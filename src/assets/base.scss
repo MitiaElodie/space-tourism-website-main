@@ -44,6 +44,13 @@ $laptop-breakpoint: 760px;
   --crew-image-size: 223px;
   --crew-separator-color: #383B4B;
   --crew-role-color: #8e8f93;
+
+  --number-slider-color: #{ $color-white };
+  --number-slider-border-color: #494a52;
+  --number-slider-border-hover-color: #{ $color-white };
+  --number-slider-active-background-color: #{ $color-white };
+  --number-slider-active-color: #{ $color-black };
+  --number-slider-size: 40px;
 }
 
 @media (min-width: $tablet-breakpoint) {
@@ -64,6 +71,8 @@ $laptop-breakpoint: 760px;
     --destination-image-size: 300px;
     
     --crew-image-size: 532px;
+
+    --number-slider-size: 60px;
   }
 }
 
@@ -87,6 +96,8 @@ $laptop-breakpoint: 760px;
     --point-slider-size: 15px;
 
     --crew-image-size: 607px;
+    
+    --number-slider-size: 80px;
   }
 }
 *,
