@@ -144,6 +144,7 @@ export default {
   .crew-view {
     &__container {
       flex-direction: row;
+      text-align: left;
     }
   }
 }
