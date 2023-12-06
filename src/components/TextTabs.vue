@@ -60,6 +60,7 @@ export default {
    }
 
    &__button {
+      cursor: pointer;
       background: none;
       color: var(--color-secondary-text);
       border: none;

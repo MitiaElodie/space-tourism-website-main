@@ -62,6 +62,7 @@ export default {
    }
 
    &__button {
+      cursor: pointer;
       width: var(--point-slider-size);
       height: var(--point-slider-size);
       border: none;
