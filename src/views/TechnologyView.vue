@@ -47,10 +47,37 @@ export default {
     order="03"
     title="Space launch 101"
   >
-    <NumberSlider 
-      :slider-list="technologyList"
-      :initially-selected="selected"
-      @click="onTechnologyClick"
-    />
+  <div class="technology-view__image-container">
+    <picture>
+      <source class="technology-view__image" :srcset="selected.imagePortrait" media="(min-width: 760px)" />
+      <img class="technology-view__image" :src="selected.imageLandscape" :alt="`Image of ${ selected.name }`" />
+    </picture>
+  </div>
+    <div class="technology-view__information-container">
+      <NumberSlider
+        class="technology-view__slider"
+        :slider-list="technologyList"
+        :initially-selected="selected"
+        @click="onTechnologyClick"
+      />
+      <div class="technology-view__details-container">
+        <h2 class="technology-view__terminology-label">The terminology...</h2>
+        <h2 class="technology-view__name">{{ selected.name }}</h2>
+        <p class="technology-view__description">{{ selected.description }}</p>
+      </div>
+    </div>
   </PageBase>
 </template>
+
+<style lang="scss">
+.technology-view {
+  &__image-container {
+    height: var(--technology-image-height);
+    width: 100%;
+  }
+
+  &__image {
+    height: 100%;
+  }
+}
+</style>
