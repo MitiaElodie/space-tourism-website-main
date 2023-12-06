@@ -57,10 +57,15 @@ export default {
   >
     <div class="crew-view__container">
       <div class="crew-view__image-container">
-        <img :src="selected.image" :alt="`Portrait of ${ selected.name }`">
+        <img
+          class="crew-view__image"
+          :src="selected.image"
+          :alt="`Portrait of ${ selected.name }`"
+        >
       </div>
       <div class="crew-view__information-container">
         <PointSlider
+          class="crew-view__slider"
           :slider-list="crewList"
           :initially-selected="selected.id"
           @click="onCrewClick"
@@ -74,3 +79,72 @@ export default {
     </div>
   </PageBase>
 </template>
+
+<style lang="scss">
+@use '@/assets/base.scss';
+
+.crew-view {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    text-align: center;
+  }
+
+  &__image-container {
+    height: var(--crew-image-size);
+    border-bottom: 0.25px solid var(--crew-separator-color);
+  }
+
+  &__image {
+    height: 100%;
+  }
+
+  &__slider {
+    justify-content: center;
+  }
+
+  &__information-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  &__role,
+  &__name {
+    text-transform: uppercase;
+    margin-bottom: 1em;
+  }
+
+  &__role {
+    display: block;
+    color: var(--crew-role-color);
+  }
+
+  &__biography {
+    color: var(--color-secondary-text)
+  }
+}
+@media (min-width: base.$tablet-breakpoint) {
+  .crew-view {
+    &__information-container,
+    &__details {
+      order: 1;
+    }
+
+    &__image-container,
+    &__slider {
+      order: 2;
+    }
+  }
+}
+
+@media (min-width: base.$laptop-breakpoint) {
+  .crew-view {
+    &__container {
+      flex-direction: row;
+    }
+  }
+}
+</style>
