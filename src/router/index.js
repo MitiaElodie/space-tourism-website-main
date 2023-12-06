@@ -22,7 +22,7 @@ const router = createRouter({
     {
       path: '/technology',
       name: 'technology',
-      component: () => import('../views/technologyView.vue')
+      component: () => import('../views/TechnologyView.vue')
     },
   ]
 })
