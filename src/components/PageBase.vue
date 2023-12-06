@@ -28,5 +28,14 @@ export default {
    &__title-container {
       margin-bottom: 1em;
    }
+
+   &__order {
+      font-weight: 700;
+      color: var(--page-title-number-color);
+   }
+
+   &__title {
+      text-transform: uppercase;
+   }
 }
 </style>
