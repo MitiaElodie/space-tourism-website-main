@@ -65,6 +65,7 @@ export default {
       cursor: pointer;
       width: var(--number-slider-size);
       height: var(--number-slider-size);
+      font-size: var(--h5-size);
       border: 1px solid var(--number-slider-border-color);
       border-radius: 100%;
       color: var(--number-slider-color);
