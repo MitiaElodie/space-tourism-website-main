@@ -47,30 +47,40 @@ export default {
     order="03"
     title="Space launch 101"
   >
-  <div class="technology-view__image-container">
-    <picture>
-      <source class="technology-view__image" :srcset="selected.imagePortrait" media="(min-width: 760px)" />
-      <img class="technology-view__image" :src="selected.imageLandscape" :alt="`Image of ${ selected.name }`" />
-    </picture>
-  </div>
-    <div class="technology-view__information-container">
-      <NumberSlider
-        class="technology-view__slider"
-        :slider-list="technologyList"
-        :initially-selected="selected"
-        @click="onTechnologyClick"
-      />
-      <div class="technology-view__details-container">
-        <h2 class="technology-view__terminology-label">The terminology...</h2>
-        <h2 class="technology-view__name">{{ selected.name }}</h2>
-        <p class="technology-view__description">{{ selected.description }}</p>
+    <div class="technology-view__container">
+      <div class="technology-view__image-container">
+        <picture>
+          <source class="technology-view__image" :srcset="selected.imagePortrait" media="(min-width: 760px)" />
+          <img class="technology-view__image" :src="selected.imageLandscape" :alt="`Image of ${ selected.name }`" />
+        </picture>
+      </div>
+      <div class="technology-view__information-container">
+        <NumberSlider
+          class="technology-view__slider"
+          :slider-list="technologyList"
+          :initially-selected="selected.id"
+          @click="onTechnologyClick"
+        />
+        <div class="technology-view__details-container">
+          <h2 class="technology-view__terminology-label">The terminology...</h2>
+          <h2 class="technology-view__name">{{ selected.name }}</h2>
+          <p class="technology-view__description">{{ selected.description }}</p>
+        </div>
       </div>
     </div>
   </PageBase>
 </template>
 
 <style lang="scss">
+@use '@/assets/base.scss';
+
 .technology-view {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
   &__image-container {
     height: var(--technology-image-height);
     width: 100%;
@@ -78,6 +88,38 @@ export default {
 
   &__image {
     height: 100%;
+  }
+
+  &__terminology-label,
+  &__name {
+    text-transform: uppercase;
+  }
+
+  &__slider {
+    justify-content: center;
+  }
+}
+
+@media (min-width: base.$laptop-breakpoint) {
+  .technology-view {
+    &__container {
+      flex-direction: row;
+      text-align: left;
+    }
+
+    &__image-container {
+      order: 2;
+    }
+
+    &__slider {
+      flex-direction: column;
+    }
+
+    &__information-container {
+      display: flex;
+      align-items: center;
+      gap: 2em;
+    }
   }
 }
 </style>
