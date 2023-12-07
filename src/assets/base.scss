@@ -52,6 +52,8 @@ $laptop-breakpoint: 760px;
   --number-slider-size: 40px;
 
   --technology-image-height: 170px;
+
+  --logo-size: 40px;
 }
 
 @media (min-width: $tablet-breakpoint) {
@@ -76,6 +78,8 @@ $laptop-breakpoint: 760px;
     --number-slider-size: 60px;
 
     --technology-image-height: 310px;
+
+    --logo-size: 48px;
   }
 }
 

@@ -24,7 +24,8 @@ const router = createRouter({
       name: 'technology',
       component: () => import('../views/TechnologyView.vue')
     },
-  ]
+  ],
+  linkActiveClass: 'app__router-link--active'
 })
 
 export default router
