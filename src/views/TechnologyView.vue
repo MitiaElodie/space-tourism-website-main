@@ -73,6 +73,7 @@ export default {
 
 <style lang="scss">
 @use '@/assets/base.scss';
+@use '@/assets/function.scss';
 
 .technology-view {
   &__container {
@@ -112,6 +113,16 @@ export default {
   }
 }
 
+.body__technology {
+  background-image: url(function.generateBodyBackgroundUrl('technology','mobile'));
+}
+
+@media (min-width: base.$tablet-breakpoint) {
+  .body__technology {
+    background-image: url(function.generateBodyBackgroundUrl('technology','tablet'));
+  }
+}
+
 @media (min-width: base.$laptop-breakpoint) {
   .technology-view {
     &__container {
@@ -131,6 +142,10 @@ export default {
       flex-direction: row;
       align-items: center;
     }
+  }
+
+  .body__technology {
+    background-image: url(function.generateBodyBackgroundUrl('technology','desktop'));
   }
 }
 </style>

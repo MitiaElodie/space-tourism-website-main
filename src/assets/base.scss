@@ -119,7 +119,7 @@ $laptop-breakpoint: 760px;
 body {
   min-height: 100vh;
   color: var(--color-text);
-  background: var(--color-background);
+  background-size: cover;
   font-size: var(--body-size);
   font-family: 'Bellefair', serif;
 }

@@ -1,3 +1,13 @@
+<script>
+export default {
+   watch: {
+      $route(to) {
+         // to update the background every time we change
+         document.body.className = `body__${to.name}`
+      }
+   }
+}
+</script>
 <template>
    <header class="app__header">
       <img class="app__logo" src="/img/shared/logo.svg" />
@@ -56,16 +66,16 @@
 }
 
 @media (min-width: base.$tablet-breakpoint) {
-      .app {
-         --main-horizontal-padding: 165px;
-         --main-vertical-padding: 76px;
-      }
+   .app {
+      --main-horizontal-padding: 165px;
+      --main-vertical-padding: 76px;
    }
+}
 
-   @media (min-width: base.$laptop-breakpoint) {
-      .app {
-         --main-horizontal-padding: 165px;
-         --main-vertical-padding: 76px;
-      }
+@media (min-width: base.$laptop-breakpoint) {
+   .app {
+      --main-horizontal-padding: 165px;
+      --main-vertical-padding: 76px;
    }
+}
 </style>

@@ -47,7 +47,7 @@ export default {
     onCrewClick(tabId) {
       this.selected = crewList.find((item) => item.id === tabId)
     }
-  }
+  },
 }
 </script>
 <template>
@@ -82,6 +82,7 @@ export default {
 
 <style lang="scss">
 @use '@/assets/base.scss';
+@use '@/assets/function.scss';
 
 .crew-view {
   &__container {
@@ -126,6 +127,11 @@ export default {
     color: var(--color-secondary-text)
   }
 }
+
+.body__crew {
+  background-image: url(function.generateBodyBackgroundUrl('crew','mobile'));
+}
+
 @media (min-width: base.$tablet-breakpoint) {
   .crew-view {
     &__information-container,
@@ -138,6 +144,10 @@ export default {
       order: 2;
     }
   }
+
+  .body__crew {
+    background-image: url(function.generateBodyBackgroundUrl('crew','tablet'));
+  }
 }
 
 @media (min-width: base.$laptop-breakpoint) {
@@ -146,6 +156,10 @@ export default {
       flex-direction: row;
       text-align: left;
     }
+  }
+
+  .body__crew {
+    background-image: url(function.generateBodyBackgroundUrl('crew','desktop'));
   }
 }
 </style>
