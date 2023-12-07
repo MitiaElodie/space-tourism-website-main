@@ -4,8 +4,8 @@ $color-black: #0B0D17;
 $color-grey: #979797;
 
 
-$tablet-breakpoint: 480px;
-$laptop-breakpoint: 760px;
+$tablet-breakpoint: 768px;
+$laptop-breakpoint: 1000px;
 
 :root {
   --color-text: #{ $color-white };
