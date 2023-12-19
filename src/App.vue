@@ -1,5 +1,28 @@
 <script>
 export default {
+   data() {
+      return {
+         menuList: [
+            {
+               number: '00',
+               name: 'home',
+            },
+            {
+               number: '01',
+               name: 'destination',
+            },
+            {
+               number: '02',
+               name: 'crew',
+            },
+            {
+               number: '03',
+               name: 'technology',
+            },
+         ]
+      }
+   },
+
    watch: {
       $route(to) {
          // to update the background every time we change
@@ -12,10 +35,15 @@ export default {
    <header class="app__header">
       <img class="app__logo" src="/img/shared/logo.svg" />
       <menu class="app__menu">
-         <RouterLink class="app__router-link" :to="{ name: 'home' }">Home</RouterLink>
-         <RouterLink class="app__router-link" :to="{ name: 'destination' }">Destination</RouterLink>
-         <RouterLink class="app__router-link" :to="{ name: 'crew' }">Crew</RouterLink>
-         <RouterLink class="app__router-link" :to="{ name: 'technology' }">Technology</RouterLink>
+         <RouterLink
+            v-for="menu in menuList"
+            :key="menu.name"
+            class="app__router-link"
+            :to="{ name: menu.name }"
+         >
+            <span class="app__menu-number">{{ menu.number }}</span>
+            <span class="app__menu-label">{{ menu.name }}</span>
+         </RouterLink>
       </menu>
    </header>
    <main class="app__main">
@@ -41,7 +69,8 @@ export default {
 
    &__menu {
       display: flex;
-      gap: 1.5em
+      gap: 1.5em;
+      backdrop-filter: blur(10px);
    }
 
    &__router-link {
@@ -63,6 +92,12 @@ export default {
       height: var(--logo-size);
       width: var(--logo-size);
    }
+
+   &__menu-number {
+      font-weight: 700;
+      margin-right: 0.75em;
+      display: none;
+   }
 }
 
 @media (min-width: base.$tablet-breakpoint) {
@@ -76,6 +111,10 @@ export default {
    .app {
       --main-horizontal-padding: 165px;
       --main-vertical-padding: 76px;
+
+      &__menu-number {
+         display: inline-block;
+      }
    }
 }
 </style>
