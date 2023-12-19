@@ -1,6 +1,6 @@
 @import './base.scss';
 
 @function generateBodyBackgroundUrl($type, $size) {
-   @return 'img/#{ $type }/background-#{ $type }-#{ $size }.jpg';
+   @return '/img/#{ $type }/background-#{ $type }-#{ $size }.jpg';
  }
  
