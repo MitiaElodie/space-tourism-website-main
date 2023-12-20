@@ -54,6 +54,7 @@ $laptop-breakpoint: 1000px;
   --technology-image-height: 170px;
 
   --logo-size: 40px;
+  --header-margin-top: 0;
 }
 
 @media (min-width: $tablet-breakpoint) {
@@ -105,6 +106,7 @@ $laptop-breakpoint: 1000px;
     --crew-image-size: 607px;
     
     --number-slider-size: 80px;
+    --header-margin-top: 1.5em;
   }
 }
 *,

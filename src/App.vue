@@ -70,7 +70,7 @@ export default {
    &__menu {
       display: flex;
       gap: 1.5em;
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(15px);
    }
 
    &__router-link {
@@ -97,6 +97,10 @@ export default {
       font-weight: 700;
       margin-right: 0.75em;
       display: none;
+   }
+
+   &__header {
+      margin-top: var(--header-margin-top);
    }
 }
 
