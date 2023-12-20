@@ -54,6 +54,8 @@ $laptop-breakpoint: 1000px;
   --technology-image-height: 170px;
 
   --logo-size: 40px;
+  --logo-margin-left: 1em;
+
   --header-margin-top: 0;
   --header-height: 60px;
 }
@@ -82,6 +84,8 @@ $laptop-breakpoint: 1000px;
     --technology-image-height: 310px;
 
     --logo-size: 48px;
+    --logo-margin-left: 1.5em;
+
     --header-height: 96px;
   }
 }

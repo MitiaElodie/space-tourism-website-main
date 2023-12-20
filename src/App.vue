@@ -96,6 +96,7 @@ export default {
    &__logo {
       height: var(--logo-size);
       width: var(--logo-size);
+      margin-left: var(--logo-margin-left);
    }
 
    &__menu-number {
