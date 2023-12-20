@@ -55,6 +55,7 @@ $laptop-breakpoint: 1000px;
 
   --logo-size: 40px;
   --header-margin-top: 0;
+  --header-height: 60px;
 }
 
 @media (min-width: $tablet-breakpoint) {
@@ -81,6 +82,7 @@ $laptop-breakpoint: 1000px;
     --technology-image-height: 310px;
 
     --logo-size: 48px;
+    --header-height: 96px;
   }
 }
 

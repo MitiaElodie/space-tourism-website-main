@@ -65,6 +65,8 @@ export default {
    &__header {
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      height: var(--header-height);
    }
 
    &__menu {
@@ -74,17 +76,20 @@ export default {
    }
 
    &__router-link {
+      display: flex;
+      align-items: center;
+      height: 100%;
       text-decoration: none;
       text-transform: uppercase;
       color: var(--color-text);
-      padding: 1em 0;
+      border-bottom: 3px solid transparent;
 
       &:hover {
-         border-bottom: 3px solid var(--tab-border-bottom-hover-color);
+         border-bottom-color: var(--tab-border-bottom-hover-color);
       }
 
       &--active {
-         border-bottom: 3px solid var(--tab-border-bottom-active-color);
+         border-bottom-color: var(--tab-border-bottom-active-color);
       }
    }
 
