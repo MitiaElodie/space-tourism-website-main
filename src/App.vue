@@ -66,15 +66,16 @@ export default {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: var(--header-height);
+
+      padding-top: var(--header-margin-top);
    }
 
    &__menu {
       display: flex;
-      height: 100%;
       gap: 1.5em;
       backdrop-filter: blur(15px);
       padding: 0 var(--menu-padding);
+      height: var(--header-height);
    }
 
    &__router-link {
@@ -105,10 +106,6 @@ export default {
       font-weight: 700;
       margin-right: 0.75em;
       display: none;
-   }
-
-   &__header {
-      margin-top: var(--header-margin-top);
    }
 }
 
