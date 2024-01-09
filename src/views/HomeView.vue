@@ -83,8 +83,11 @@ export default {
 
 @media (min-width: base.$laptop-breakpoint) {
    .home-view {
+      --description-margin-bottom: 0;
+
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
+      align-items: flex-end;
 
       &__explore-button-container,
       &__description {
