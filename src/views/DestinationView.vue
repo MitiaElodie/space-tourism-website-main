@@ -112,11 +112,16 @@ export default {
   .destination-view {
     &__container {
       display: flex;
-      gap: 5em;
+      justify-content: center;
+      gap: var(--destination-container-gap);
     }
 
     &__tabs {
       justify-content: start;
+    }
+
+    &__information-container {
+      max-width: var(--destination-information-container-max-width);
     }
   }
 
