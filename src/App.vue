@@ -74,6 +74,7 @@ export default {
       height: 100%;
       gap: 1.5em;
       backdrop-filter: blur(15px);
+      padding: 0 var(--menu-padding);
    }
 
    &__router-link {
