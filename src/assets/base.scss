@@ -20,6 +20,9 @@ $laptop-breakpoint: 1000px;
   --body-size: 15px;
   --body-line-height: 28px;
 
+  --main-horizontal-padding: 50px;
+  --main-vertical-padding: 40px;
+
   --explore-button-size: 150px;
   --explore-button-font-size: 20px;
   --explore-button-color: #{ $color-black };
@@ -69,6 +72,9 @@ $laptop-breakpoint: 1000px;
     --h5-size: 20px;
     --body-size: 16px;
 
+    --main-horizontal-padding: 100px;
+    --main-vertical-padding: 76px;
+
     --explore-button-size: 242px;
     --explore-button-font-size: 32px;
     --explore-button-color: #{ $color-black };
@@ -100,6 +106,9 @@ $laptop-breakpoint: 1000px;
     --h4-size: 32px;
     --h5-size: 28px;
     --body-size: 18px;
+
+    --main-horizontal-padding: 165px;
+    --main-vertical-padding: 76px;
 
     --explore-button-size: 274px;
     --explore-button-font-size: 32px;
