@@ -53,6 +53,7 @@ export default {
 
 <style lang="scss">
 @use '@/assets/base.scss';
+@use '@/assets/function.scss';
 
 .app {
    &__main {
@@ -105,10 +106,67 @@ export default {
       display: none;
    }
 }
+
+.body {
+   &__home {
+      background-image: url(function.generateBodyBackgroundUrl('home','mobile'));
+   }
+
+   &__destination {
+     background-image: url(function.generateBodyBackgroundUrl('destination','mobile'));
+   }
+
+   &__crew {
+      background-image: url(function.generateBodyBackgroundUrl('crew','mobile'));
+   }
+
+   &__technology {
+      background-image: url(function.generateBodyBackgroundUrl('technology','mobile'));
+   }
+}
+
+@media (min-width: base.$tablet-breakpoint) {
+  .body {
+      &__home {
+         background-image: url(function.generateBodyBackgroundUrl('home','tablet'));
+      }
+
+      &__destination {
+         background-image: url(function.generateBodyBackgroundUrl('destination','tablet'));
+      }
+
+      &__crew {
+         background-image: url(function.generateBodyBackgroundUrl('crew','tablet'));
+      }
+
+      &__technology {
+         background-image: url(function.generateBodyBackgroundUrl('technology','tablet'));
+      }
+  }
+}
+
 @media (min-width: base.$laptop-breakpoint) {
    .app {
       &__menu-number {
          display: inline-block;
+      }
+   }
+
+  .body {
+      &__home {
+         background-image: url(function.generateBodyBackgroundUrl('home','desktop'));
+      }
+
+      &__destination {
+         background-image: url(function.generateBodyBackgroundUrl('destination','desktop'));
+      }
+
+      &__crew {
+         background-image: url(function.generateBodyBackgroundUrl('crew','desktop'));
+      }
+
+      &__technology {
+         background-image: url(function.generateBodyBackgroundUrl('technology','desktop'));
       }
    }
 }

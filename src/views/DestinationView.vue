@@ -83,7 +83,6 @@ export default {
 
 <style lang="scss">
 @use '@/assets/base.scss';
-@use '@/assets/function.scss';
 
 .destination-view {
   &__image-container {
@@ -95,16 +94,6 @@ export default {
 
   &__tabs {
     justify-content: center;
-  }
-}
-
-.body__destination {
-  background-image: url(function.generateBodyBackgroundUrl('destination','mobile'));
-}
-
-@media (min-width: base.$tablet-breakpoint) {
-  .body__destination {
-    background-image: url(function.generateBodyBackgroundUrl('destination','tablet'));
   }
 }
 
@@ -123,10 +112,6 @@ export default {
     &__information-container {
       max-width: var(--destination-information-container-max-width);
     }
-  }
-
-  .body__destination {
-    background-image: url(function.generateBodyBackgroundUrl('destination','desktop'));
   }
 }
 </style>

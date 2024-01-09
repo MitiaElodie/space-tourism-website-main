@@ -128,10 +128,6 @@ export default {
   }
 }
 
-.body__crew {
-  background-image: url(function.generateBodyBackgroundUrl('crew','mobile'));
-}
-
 @media (min-width: base.$tablet-breakpoint) {
   .crew-view {
     &__information-container,
@@ -144,10 +140,6 @@ export default {
       order: 2;
     }
   }
-
-  .body__crew {
-    background-image: url(function.generateBodyBackgroundUrl('crew','tablet'));
-  }
 }
 
 @media (min-width: base.$laptop-breakpoint) {
@@ -156,10 +148,6 @@ export default {
       flex-direction: row;
       text-align: left;
     }
-  }
-
-  .body__crew {
-    background-image: url(function.generateBodyBackgroundUrl('crew','desktop'));
   }
 }
 </style>

@@ -66,18 +66,10 @@ export default {
    }
 }
 
-.body__home {
-   background-image: url(function.generateBodyBackgroundUrl('home','mobile'));
-}
-
 @media (min-width: base.$tablet-breakpoint) {
    .home-view {
       --description-max-width: 450px;
       --description-margin-bottom: 60px;
-   }
-   
-   .body__home {
-      background-image: url(function.generateBodyBackgroundUrl('home','tablet'));
    }
 }
 
@@ -93,10 +85,6 @@ export default {
       &__description {
          text-align: start;
       }
-   }
-   
-   .body__home {
-      background-image: url(function.generateBodyBackgroundUrl('home','desktop'));
    }
 }
 </style>
