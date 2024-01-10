@@ -151,6 +151,10 @@ export default {
       order: 1;
     }
 
+    &__details {
+      max-width: var(--crew-information-max-width);
+    }
+
     &__image-container,
     &__slider {
       order: 2;
@@ -170,7 +174,6 @@ export default {
     }
 
     &__information-container {
-      max-width: var(--crew-information-max-width);
       align-items: start;
       justify-content: space-around;
     }
