@@ -54,6 +54,7 @@ export default {
   <PageBase
     order="02"
     title="Meet our crew"
+    class="crew-view"
   >
     <div class="crew-view__container">
       <div class="crew-view__image-container">
@@ -85,6 +86,9 @@ export default {
 @use '@/assets/function.scss';
 
 .crew-view {
+  --role-size: 16px;
+  --name-size: 24px;
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -115,21 +119,33 @@ export default {
   &__role,
   &__name {
     text-transform: uppercase;
-    margin-bottom: 1em;
   }
 
   &__role {
     display: block;
     color: var(--crew-role-color);
+    font-size: var(--role-size);
+    margin-bottom: 16px;
+  }
+
+  &__name {
+    font-size: var(--name-size);
+    font-weight: 400;
+    margin-bottom: 16px;
   }
 
   &__biography {
-    color: var(--color-secondary-text)
+    color: var(--color-secondary-text);
+    font-size: var(--body-size);
+    line-height: var(--body-line-height);
   }
 }
 
 @media (min-width: base.$tablet-breakpoint) {
   .crew-view {
+    --role-size: 24px;
+    --name-size: 40px;
+
     &__information-container,
     &__details {
       order: 1;
@@ -144,14 +160,19 @@ export default {
 
 @media (min-width: base.$laptop-breakpoint) {
   .crew-view {
+    --role-size: 32px;
+    --name-size: 56px;
+
     &__container {
       flex-direction: row;
+      justify-content: space-around;
       text-align: left;
     }
 
     &__information-container {
       max-width: var(--crew-information-max-width);
       align-items: start;
+      justify-content: space-around;
     }
   }
 }
