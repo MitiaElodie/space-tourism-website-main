@@ -73,7 +73,12 @@ export default {
 @media (min-width: base.$tablet-breakpoint) {
    .home-view {
       --description-max-width: 450px;
-      --description-margin-bottom: 60px;
+      --description-margin-bottom: 100px;
+      --description-margin-top: 60px;
+
+      &__description {
+         margin-top: var(--description-margin-top);
+      }
    }
 }
 
