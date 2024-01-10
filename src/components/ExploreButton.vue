@@ -1,23 +1,16 @@
-<script>
-export default {
-   methods: {
-      onButtonClick() {
-         // do nothing for now
-         console.log('Explore button clicked')
-      }
-   }
-}
-</script>
-
 <template>
-   <button
+   <router-link
       class="explore-button"
-      @click="onButtonClick"
-   >Explore</button>
+      :to="{ name: 'destination' }"
+   >Explore</router-link>
 </template>
 
 <style lang="scss">
 .explore-button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
    height: var(--explore-button-size);
    width: var(--explore-button-size);
    font-size: var(--explore-button-font-size);
@@ -30,6 +23,7 @@ export default {
    cursor: pointer;
 
    text-transform: uppercase;
+   text-decoration: none;
 
    transition: box-shadow 0.1s ease;
 
