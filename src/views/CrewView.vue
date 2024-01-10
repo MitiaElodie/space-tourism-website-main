@@ -109,7 +109,7 @@ export default {
   &__information-container {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 2em;
   }
 
   &__role,
@@ -147,6 +147,11 @@ export default {
     &__container {
       flex-direction: row;
       text-align: left;
+    }
+
+    &__information-container {
+      max-width: var(--crew-information-max-width);
+      align-items: start;
     }
   }
 }
