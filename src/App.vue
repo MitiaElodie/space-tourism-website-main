@@ -19,7 +19,9 @@ export default {
                number: '03',
                name: 'technology',
             },
-         ]
+         ],
+         menuOpened: false,
+         menuToggleIcon: '/img/shared/icon-hamburger.svg',
       }
    },
 
@@ -28,6 +30,15 @@ export default {
          // to update the background every time we change
          document.body.className = `body__${to.name}`
       }
+   },
+
+   methods: {
+      onClickMenuToggle() {
+         this.menuOpened = !this.menuOpened
+
+         const iconName = this.menuOpened ? 'close' : 'hamburger'
+         this.menuToggleIcon = '/img/shared/icon-'+ iconName +'.svg'
+      }
    }
 }
 </script>
@@ -35,7 +46,10 @@ export default {
    <header class="app__header">
       <img class="app__logo" src="/img/shared/logo.svg" />
       <div class="app__horizontal-separator"/>
-      <menu class="app__menu">
+      <menu
+         class="app__menu"
+         :class="{'app__menu--closed': !this.menuOpened}"
+      >
          <RouterLink
             v-for="menu in menuList"
             :key="menu.name"
@@ -46,6 +60,15 @@ export default {
             <span class="app__menu-label">{{ menu.name }}</span>
          </RouterLink>
       </menu>
+      <div
+         class="app__menu-toggle"
+         @click="onClickMenuToggle"
+      >
+         <img
+            class="app__menu-toggle-icon"
+            :src="menuToggleIcon"
+         />
+      </div>
    </header>
    <main class="app__main">
       <RouterView />
@@ -65,6 +88,7 @@ export default {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
 
       padding-top: var(--header-margin-top);
    }
@@ -81,7 +105,6 @@ export default {
    &__router-link {
       display: flex;
       align-items: center;
-      height: 100%;
       text-decoration: none;
       text-transform: uppercase;
       color: var(--color-text);
@@ -105,7 +128,6 @@ export default {
    &__menu-number {
       font-weight: 700;
       margin-right: 0.75em;
-      display: none;
    }
 }
 
@@ -127,6 +149,34 @@ export default {
    }
 }
 
+@media (max-width: base.$tablet-breakpoint) {
+   .app {
+      &__menu {
+         position: absolute;
+         flex-direction: column;
+         width: 75%;
+         height: 100vh;
+         top: 0;
+         right: 0;
+         padding: 0 2em;
+         padding-top: 150px;
+
+         &--closed {
+            display: none;
+         }
+      }
+
+      &__router-link {
+         padding: 20px;
+      }
+
+      &__menu-toggle {
+         z-index: 2;
+         padding: 20px;
+      }
+   }
+}
+
 @media (min-width: base.$tablet-breakpoint) {
   .body {
       &__home {
@@ -144,7 +194,17 @@ export default {
       &__technology {
          background-image: url(function.generateBodyBackgroundUrl('technology','tablet'));
       }
-  }
+   }
+
+   .app {
+      &__menu-toggle {
+         display: none;
+      }
+
+      &__menu-number {
+         display: none;
+      }
+   }
 }
 
 @media (min-width: base.$laptop-breakpoint) {
