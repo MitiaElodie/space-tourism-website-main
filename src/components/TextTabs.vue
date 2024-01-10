@@ -65,7 +65,7 @@ export default {
       color: var(--color-secondary-text);
       border: none;
       text-transform: uppercase;
-      padding: 10px;
+      padding: var(--text-tab-padding);
       font-size: var(--body-size);
 
       &:hover {

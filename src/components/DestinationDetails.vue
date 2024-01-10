@@ -33,6 +33,7 @@ export default {
    text-align: center;
    &__name {
       font-size: var(--h2-size);
+      margin: var(--destination-title-margin) 0;
    }
 
    &__description {

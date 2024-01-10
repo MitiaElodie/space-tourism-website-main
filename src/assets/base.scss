@@ -39,6 +39,7 @@ $laptop-breakpoint: 1000px;
   --destination-separator-color: #{ $color-grey };
   --destination-image-size: 170px;
   --destination-information-container-max-width: 575px;
+  --destination-title-margin: 16px;
 
   --point-slider-size: 10px;
   --point-slider-color: #36373f;
@@ -65,6 +66,8 @@ $laptop-breakpoint: 1000px;
   --header-height: 60px;
 
   --menu-background-color: rgba(255, 255, 255, 0.1);
+
+  --text-tab-padding: 15px;
 }
 
 @media (min-width: $tablet-breakpoint) {
