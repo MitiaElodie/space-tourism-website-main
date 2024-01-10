@@ -30,7 +30,11 @@ export default {
 @use '@/assets/function.scss';
 
 .home-view {
-   &__explore-button-container,
+   &__explore-button-container{
+      display: flex;
+      justify-content: center;
+   }
+
    &__description {
       text-align: center;
    }
@@ -80,6 +84,7 @@ export default {
       display: flex;
       justify-content: space-around;
       align-items: flex-end;
+      min-height: 400px;
 
       &__explore-button-container,
       &__description {
