@@ -31,7 +31,7 @@ $laptop-breakpoint: 1000px;
   --explore-button-shadow-width: 40px;
 
   --page-title-number-color: #51535a;
-  --page-title-margin-bottom: 1em;
+  --page-title-margin-bottom: 2em;
 
   --tab-border-bottom-hover-color: #{ $color-grey };
   --tab-border-bottom-active-color: #{ $color-white};
@@ -87,8 +87,6 @@ $laptop-breakpoint: 1000px;
     --explore-button-color: #{ $color-black };
     --explore-button-background-color: #{ $color-white };
     --explore-button-shadow-width: 40px;
-
-    --page-title-margin-bottom: 2em;
 
     --destination-image-size: 300px;
     --destination-additional-information-gap: 100px;

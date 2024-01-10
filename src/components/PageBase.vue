@@ -15,10 +15,10 @@ export default {
 </script>
 <template>
    <div class="page-base">
-      <h1 class="page-base__title-container">
+      <h3 class="page-base__title-container">
          <span class="page-base__order">{{ order }}</span>
          <span class="page-base__title">{{ title }}</span>
-      </h1>
+      </h3>
       <slot />
    </div>
 </template>
@@ -30,6 +30,7 @@ export default {
    &__title-container {
       text-align: center;
       margin-bottom: var(--page-title-margin-bottom);
+      font-size: var(--h5-size);
    }
 
    &__order {
