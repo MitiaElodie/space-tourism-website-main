@@ -66,6 +66,7 @@ export default {
       border: none;
       text-transform: uppercase;
       padding: 10px;
+      font-size: var(--body-size);
 
       &:hover {
          border-bottom: 2px solid var(--tab-border-bottom-hover-color);
