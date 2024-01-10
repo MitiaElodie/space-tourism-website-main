@@ -28,6 +28,7 @@ export default {
 
 <style lang="scss">
 @use '@/assets/base.scss';
+
 .destination-details {
    text-align: center;
    &__name {

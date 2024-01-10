@@ -24,8 +24,11 @@ export default {
 </template>
 
 <style lang="scss">
+@use '@/assets/base.scss';
+
 .page-base {
    &__title-container {
+      text-align: center;
       margin-bottom: 1em;
    }
 
@@ -37,6 +40,14 @@ export default {
 
    &__title {
       text-transform: uppercase;
+   }
+}
+
+@media (min-width: base.$tablet-breakpoint) {
+   .page-base {
+      &__title-container {
+         text-align: left;
+      }
    }
 }
 </style>
