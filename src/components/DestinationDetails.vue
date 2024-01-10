@@ -64,6 +64,8 @@ export default {
    .destination-details {
       &__additional-information {
          flex-direction: row;
+         justify-content: center;
+         gap: var(--destination-additional-information-gap);
       }
    }
 }
@@ -71,6 +73,10 @@ export default {
 @media (min-width: base.$laptop-breakpoint) {
    .destination-details {
       text-align: left;
+
+      &__additional-information {
+         justify-content: start;
+      }
    }
 }
 </style>

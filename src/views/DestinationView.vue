@@ -101,7 +101,6 @@ export default {
   .destination-view {
     &__container {
       display: flex;
-      justify-content: center;
       gap: var(--destination-container-gap);
     }
 
