@@ -29,7 +29,7 @@ export default {
 .page-base {
    &__title-container {
       text-align: center;
-      margin-bottom: 1em;
+      margin-bottom: var(--page-title-margin-bottom);
    }
 
    &__order {

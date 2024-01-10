@@ -82,6 +82,7 @@ export default {
 .app {
    &__main {
       padding: var(--main-horizontal-padding) var(--main-vertical-padding);
+      padding-bottom: 0;
    }
 
    &__header {
