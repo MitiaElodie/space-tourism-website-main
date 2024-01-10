@@ -71,7 +71,8 @@ export default {
    &__menu {
       display: flex;
       gap: 1.5em;
-      backdrop-filter: blur(15px);
+      backdrop-filter: blur(4px);
+      background-color: var(--menu-background-color);
       padding: 0 var(--menu-padding);
       height: var(--header-height);
    }

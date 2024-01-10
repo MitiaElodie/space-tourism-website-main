@@ -61,6 +61,8 @@ $laptop-breakpoint: 1000px;
 
   --header-margin-top: 0;
   --header-height: 60px;
+
+  --menu-background-color: rgba(255, 255, 255, 0.1);
 }
 
 @media (min-width: $tablet-breakpoint) {
