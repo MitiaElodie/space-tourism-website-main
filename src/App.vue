@@ -34,6 +34,7 @@ export default {
 <template>
    <header class="app__header">
       <img class="app__logo" src="/img/shared/logo.svg" />
+      <div class="app__horizontal-separator"/>
       <menu class="app__menu">
          <RouterLink
             v-for="menu in menuList"
@@ -150,6 +151,15 @@ export default {
    .app {
       &__menu-number {
          display: inline-block;
+      }
+
+      &__horizontal-separator {
+         height: 2px;
+         width: 100%;
+         margin-right: -1em;
+         margin-left: 2em;
+         z-index: 2;
+         background-color: var(--menu-background-color);
       }
    }
 
