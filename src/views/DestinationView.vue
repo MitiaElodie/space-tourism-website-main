@@ -66,16 +66,18 @@ export default {
       <div class="destination-view__image-container">
         <img :src="selected.image" :alt="`Image of ${ selected.name }`"/>
       </div>
-      <div class="destination-view__information-container">
-        <TextTabs
-          class="destination-view__tabs"
-          :tab-list="destinationList"
-          :initially-selected="selected.id"
-          @click="onDestinationClick"
-        />
-        <DestinationDetails
-          :destination="selected"
-        />
+      <div class="destination-view__information-area">
+        <div class="destination-view__information-container">
+          <TextTabs
+            class="destination-view__tabs"
+            :tab-list="destinationList"
+            :initially-selected="selected.id"
+            @click="onDestinationClick"
+          />
+          <DestinationDetails
+            :destination="selected"
+          />
+        </div>
       </div>
     </div>
   </PageBase>
@@ -95,21 +97,31 @@ export default {
   &__tabs {
     justify-content: center;
   }
+
+  &__description {
+    text-align: center;
+  }
+
+  &__information-container {
+    max-width: var(--destination-information-container-max-width);
+  }
+
+  &__information-area {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 @media (min-width: base.$laptop-breakpoint) {
   .destination-view {
     &__container {
       display: flex;
+      justify-content: center;
       gap: var(--destination-container-gap);
     }
 
     &__tabs {
       justify-content: start;
-    }
-
-    &__information-container {
-      max-width: var(--destination-information-container-max-width);
     }
   }
 }
