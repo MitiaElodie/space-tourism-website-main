@@ -132,6 +132,10 @@ export default {
       flex-direction: row;
       align-items: center;
     }
+
+    &__details-container {
+      max-width: var(--technology-details-max-width);
+    }
   }
 }
 </style>
