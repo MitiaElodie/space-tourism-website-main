@@ -39,6 +39,8 @@ export default {
       padding-bottom: 2em;
       color: var(--color-secondary-text);
       border-bottom: 0.2px solid var(--destination-separator-color);
+      font-size: var(--body-size);
+      line-height: var(--body-line-height);
    }
 
    &__additional-information {
