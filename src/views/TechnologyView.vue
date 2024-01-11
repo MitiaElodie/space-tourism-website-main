@@ -50,7 +50,7 @@ export default {
     <div class="technology-view__container">
       <div class="technology-view__image-container">
         <picture>
-          <source class="technology-view__image" :srcset="selected.imagePortrait" media="(min-width: 760px)" />
+          <source class="technology-view__image" :srcset="selected.imagePortrait" media="(min-width: 1000px)" />
           <img class="technology-view__image" :src="selected.imageLandscape" :alt="`Image of ${ selected.name }`" />
         </picture>
       </div>
@@ -84,7 +84,6 @@ export default {
 
   &__image-container {
     height: var(--technology-image-height);
-    width: 100%;
   }
 
   &__image {
@@ -100,6 +99,7 @@ export default {
   &__terminology-label,
   &__description {
     color: var(--color-secondary-text);
+    font-size: var(--body-size);
   }
 
   &__slider {
@@ -111,6 +111,14 @@ export default {
     gap: 2em;
     flex-direction: column;
   }
+
+  &__name {
+    font-size: var(--h3-size);
+  }
+
+  &__description {
+    line-height: var(--body-line-height);
+  }
 }
 
 @media (min-width: base.$laptop-breakpoint) {
@@ -118,10 +126,20 @@ export default {
     &__container {
       flex-direction: row;
       text-align: left;
+      justify-content: space-between;
+      align-items: center;
+      margin-right: calc(var(--main-vertical-padding) * -1); // to overwrite the built in padding in .app__main
     }
 
     &__image-container {
       order: 2;
+      width: var(--technology-image-width);
+      height: unset; // to overwrite the height in the mobile and tablet
+    }
+
+    &__image {
+      width: 100%;
+      height: auto;
     }
 
     &__slider {

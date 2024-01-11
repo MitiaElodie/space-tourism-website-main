@@ -14,7 +14,7 @@ $laptop-breakpoint: 1000px;
 
   --h1-size: 80px;
   --h2-size: 100px;
-  --h3-size: 56px;
+  --h3-size: 24px;
   --h4-size: 32px;
   --h5-size: 16px;
   --body-size: 15px;
@@ -74,7 +74,7 @@ $laptop-breakpoint: 1000px;
   :root {
     --h1-size: 150px;
     --h2-size: 100px;
-    --h3-size: 56px;
+    --h3-size: 40px;
     --h4-size: 32px;
     --h5-size: 20px;
     --body-size: 16px;
@@ -92,7 +92,7 @@ $laptop-breakpoint: 1000px;
     --destination-additional-information-gap: 100px;
     
     --crew-image-size: 532px;
-    --crew-information-max-width: 600px;
+    --crew-information-max-width: 445px;
 
     --number-slider-size: 60px;
 
@@ -140,6 +140,7 @@ $laptop-breakpoint: 1000px;
     --menu-padding: 150px;
 
     --technology-details-max-width: 470px;
+    --technology-image-width: 515px;
   }
 }
 *,
