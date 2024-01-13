@@ -10,7 +10,6 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -44,8 +43,6 @@ Users should be able to:
 - Flexbox
 - Mobile-first workflow
 - [Vue.js](https://vuejs.org/) - JS Framework
-
-### What I learned
 
 ## Author
 
