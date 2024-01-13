@@ -80,14 +80,17 @@ export default {
     display: flex;
     flex-direction: column;
     text-align: center;
+    gap: 2em;
   }
 
   &__image-container {
     height: var(--technology-image-height);
+    margin: 0 calc(var(--main-vertical-padding) * -1);
   }
 
   &__image {
     height: 100%;
+    width: 100%;
   }
 
   &__terminology-label,
@@ -134,7 +137,10 @@ export default {
     &__image-container {
       order: 2;
       width: var(--technology-image-width);
-      height: unset; // to overwrite the height in the mobile and tablet
+
+      // to overwrite the style in the mobile and tablet
+      height: unset;
+      margin: 0;
     }
 
     &__image {
